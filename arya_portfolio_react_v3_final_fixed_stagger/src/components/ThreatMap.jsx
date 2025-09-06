@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 import { ShieldAlert, Map, RefreshCw } from 'lucide-react'
 
 const SOURCES = [
-  { key: 'kaspersky', label: 'Kaspersky (video demo)', url: 'https://www.youtube.com/embed/6KQYCMgnffa?autoplay=0&mute=1' },
   { key: 'radware', label: 'Radware (if embeddable)', url: 'https://livethreatmap.radware.com/' },
   { key: 'checkpoint', label: 'Check Point (if embeddable)', url: 'https://threatmap.checkpoint.com/' }
 ]
