@@ -165,6 +165,7 @@ export default function App() {
             </a>
 
             <Card>
+              <a href="https://innobytes.in/" target="_blank" rel="noreferrer" className="p-5 rounded-xl border border-cyber-neon/40 bg-cyber-panel/60 card-glow"></a>
               <h4 className="font-semibold">Software Developer Intern — Erfinden Technologies Pvt. Ltd.</h4>
               <p className="text-xs text-gray-400">Jun 2025 – Aug 2025 · Pune</p>
               <ul className="text-gray-300 text-sm mt-3 list-disc ml-5">
