@@ -78,6 +78,7 @@ export default function App() {
           <SectionTitle icon={<Terminal/>} text="Projects" />
           <div className="grid md:grid-cols-2 gap-6 mt-4">
 
+            {/* Red & Blue Team Simulation */}
             <motion.div whileHover={{scale:1.03}} className="p-5 bg-cyber-panel/60 rounded-xl border border-gray-800 card-glow">
               <h4 className="font-semibold">Red & Blue Team Simulation Platform</h4>
               <p className="text-gray-300 text-sm mt-2">Comprehensive training platform integrating real tools and telemetry.</p>
@@ -94,13 +95,28 @@ export default function App() {
               </div>
             </motion.div>
 
+            {/* Chronic Disease Management */}
             <motion.div whileHover={{scale:1.03}} className="p-5 bg-cyber-panel/60 rounded-xl border border-gray-800 card-glow">
-              <h4 className="font-semibold">Cyber Bot Hygiene (Security Advisor)</h4>
-              <p className="text-gray-300 text-sm mt-2">AI assistant for cyber hygiene, guides secure practices and performs automated checks.</p>
+              <h4 className="font-semibold">Chronic Disease Management</h4>
+              <p className="text-gray-300 text-sm mt-2">
+                AI-driven healthcare platform to monitor chronic illnesses, connect doctors and patients, and assist medical store owners with medicine data.
+              </p>
               <ul className="text-gray-400 text-sm mt-2 list-disc ml-4">
-                <li>Playbooks for common misconfigurations and phishing awareness</li>
-                <li>Extensible rules for endpoint and network posture hints</li>
+                <li>Doctor–Patient dashboards with real-time health tracking</li>
+                <li>Pneumonia & skin disease detection using AI/ML models</li>
+                <li>Medicine inventory & analytics for medical store owners</li>
+                <li>Problem statement driven design — improving patient outcomes</li>
               </ul>
+              <div className="mt-3 flex flex-wrap gap-2 text-xs">
+                {['React','Node.js','Express','MongoDB','AI/ML','Tailwind'].map(tag=>(
+                  <span key={tag} className="px-2 py-1 rounded border border-cyber-neon/40 hover:bg-cyber-neon/10 transition">{tag}</span>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Placeholder for Future Projects */}
+            <motion.div whileHover={{scale:1.03}} className="flex items-center justify-center p-5 bg-cyber-panel/30 rounded-xl border border-dashed border-gray-700 text-gray-500">
+              <span className="text-sm">🚧 New Project Coming Soon...</span>
             </motion.div>
 
           </div>
