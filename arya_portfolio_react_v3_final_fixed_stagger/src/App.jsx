@@ -78,8 +78,13 @@ export default function App() {
           <SectionTitle icon={<Terminal/>} text="Projects" />
           <div className="grid md:grid-cols-2 gap-6 mt-4">
 
-            {/* Red & Blue Team Simulation */}
-            <motion.div whileHover={{scale:1.03}} className="p-5 bg-cyber-panel/60 rounded-xl border border-gray-800 card-glow">
+            {/* Red & Blue Team Simulation Platform */}
+            <motion.a 
+              href="https://github.com/Arya-25/Red-Team-Blue-Team-.git"
+              target="_blank" rel="noreferrer"
+              whileHover={{scale:1.03}} 
+              className="p-5 bg-cyber-panel/60 rounded-xl border border-gray-800 card-glow block"
+            >
               <h4 className="font-semibold">Red & Blue Team Simulation Platform</h4>
               <p className="text-gray-300 text-sm mt-2">Comprehensive training platform integrating real tools and telemetry.</p>
               <ul className="text-gray-400 text-sm mt-2 list-disc ml-4">
@@ -93,31 +98,51 @@ export default function App() {
                   <span key={tag} className="px-2 py-1 rounded border border-cyber-neon/40 hover:bg-cyber-neon/10 transition">{tag}</span>
                 ))}
               </div>
+            </motion.a>
+
+            {/* Cyber Bot Hygiene */}
+            <motion.div whileHover={{scale:1.03}} className="p-5 bg-cyber-panel/60 rounded-xl border border-gray-800 card-glow">
+              <h4 className="font-semibold">Cyber Bot Hygiene (Security Advisor)</h4>
+              <p className="text-gray-300 text-sm mt-2">AI assistant for cyber hygiene, guides secure practices and performs automated checks.</p>
+              <ul className="text-gray-400 text-sm mt-2 list-disc ml-4">
+                <li>Playbooks for common misconfigurations and phishing awareness</li>
+                <li>Extensible rules for endpoint and network posture hints</li>
+              </ul>
             </motion.div>
 
             {/* Chronic Disease Management */}
             <motion.div whileHover={{scale:1.03}} className="p-5 bg-cyber-panel/60 rounded-xl border border-gray-800 card-glow">
-              <h4 className="font-semibold">Chronic Disease Management</h4>
-              <p className="text-gray-300 text-sm mt-2">
-                AI-driven healthcare platform to monitor chronic illnesses, connect doctors and patients, and assist medical store owners with medicine data.
-              </p>
+              <h4 className="font-semibold">Chronic Disease Management with AI</h4>
+              <p className="text-gray-300 text-sm mt-2">Healthcare monitoring system integrating doctor–patient dashboards and AI-powered detection.</p>
               <ul className="text-gray-400 text-sm mt-2 list-disc ml-4">
-                <li>Doctor–Patient dashboards with real-time health tracking</li>
-                <li>Pneumonia & skin disease detection using AI/ML models</li>
-                <li>Medicine inventory & analytics for medical store owners</li>
-                <li>Problem statement driven design — improving patient outcomes</li>
+                <li>Doctor & patient dashboards for health tracking</li>
+                <li>AI models for pneumonia & skin disease detection</li>
+                <li>Medical store medicine data management</li>
+                <li>End-to-end system built around real-world problem statements</li>
+              </ul>
+            </motion.div>
+
+            {/* Agribusiness Platform */}
+            <motion.a 
+              href="https://github.com/Arya-25/Agribuziness-repo.git"
+              target="_blank" rel="noreferrer"
+              whileHover={{scale:1.03}} 
+              className="p-5 bg-cyber-panel/60 rounded-xl border border-gray-800 card-glow block"
+            >
+              <h4 className="font-semibold">Agribusiness Platform</h4>
+              <p className="text-gray-300 text-sm mt-2">Full-stack platform designed for farmers, FPOs, and corporate buyers to streamline agribusiness operations.</p>
+              <ul className="text-gray-400 text-sm mt-2 list-disc ml-4">
+                <li>Role-based authentication (Farmer, FPO, Corporate)</li>
+                <li>Email verification & secure login system</li>
+                <li>Product & order management with dashboards</li>
+                <li>Focus on scalability and data-driven insights</li>
               </ul>
               <div className="mt-3 flex flex-wrap gap-2 text-xs">
-                {['React','Node.js','Express','MongoDB','AI/ML','Tailwind'].map(tag=>(
+                {['MSSQL','.NET','React','Tailwind'].map(tag=>(
                   <span key={tag} className="px-2 py-1 rounded border border-cyber-neon/40 hover:bg-cyber-neon/10 transition">{tag}</span>
                 ))}
               </div>
-            </motion.div>
-
-            {/* Placeholder for Future Projects */}
-            <motion.div whileHover={{scale:1.03}} className="flex items-center justify-center p-5 bg-cyber-panel/30 rounded-xl border border-dashed border-gray-700 text-gray-500">
-              <span className="text-sm">🚧 New Project Coming Soon...</span>
-            </motion.div>
+            </motion.a>
 
           </div>
         </section>
@@ -164,8 +189,7 @@ export default function App() {
               </ul>
             </a>
 
-            
-            <a href="https://innobytes.in/" target="_blank" rel="noreferrer" className="p-5 rounded-xl border border-cyber-neon/40 bg-cyber-panel/60 card-glow">
+            <Card>
               <h4 className="font-semibold">Software Developer Intern — Erfinden Technologies Pvt. Ltd.</h4>
               <p className="text-xs text-gray-400">Jun 2025 – Aug 2025 · Pune</p>
               <ul className="text-gray-300 text-sm mt-3 list-disc ml-5">
@@ -173,8 +197,7 @@ export default function App() {
                 <li>Database design & integration with Supabase</li>
                 <li>End-to-end Agribusiness project contribution</li>
               </ul>
-            </a>
-            
+            </Card>
 
             <a href="https://amazuretec.com/" target="_blank" rel="noreferrer" className="p-5 rounded-xl border border-cyber-neon/40 bg-cyber-panel/60 card-glow">
               <h4 className="font-semibold">Cybersecurity Analyst Intern — Amazure Technologies Pvt. Ltd.</h4>
