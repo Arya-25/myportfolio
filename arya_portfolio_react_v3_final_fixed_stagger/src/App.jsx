@@ -4,7 +4,7 @@ import Navbar from './components/Navbar'
 import NameWave from './components/NameWave'
 import ThreatMap from './components/ThreatMap'
 import { motion } from 'framer-motion'
-import { Shield, Terminal, Cpu, Mail, BookOpenCheck, Trophy } from 'lucide-react'
+import { Shield, Terminal, Cpu, Mail, BookOpenCheck, Trophy, Github, ExternalLink } from 'lucide-react'
 
 // ✅ Sections & Resume path
 const sections = ['home','projects','skills','experience','education','certifications','contact','threats']
@@ -80,12 +80,15 @@ export default function App() {
 
             {/* Red & Blue Team Simulation Platform */}
             <motion.a 
-              href="https://github.com/Arya-25/Red-Team-Blue-Team-.git"
+              href="https://github.com/Arya-25/Red-Team-Blue-Team-"
               target="_blank" rel="noreferrer"
               whileHover={{scale:1.03}} 
               className="p-5 bg-cyber-panel/60 rounded-xl border border-gray-800 card-glow block"
             >
-              <h4 className="font-semibold">Red & Blue Team Simulation Platform</h4>
+              <div className="flex items-center gap-2">
+                <h4 className="font-semibold">Red & Blue Team Simulation Platform</h4>
+                <Github className="w-4 h-4 text-cyber-neon" />
+              </div>
               <p className="text-gray-300 text-sm mt-2">Comprehensive training platform integrating real tools and telemetry.</p>
               <ul className="text-gray-400 text-sm mt-2 list-disc ml-4">
                 <li>React.js frontend, Django REST backend, MongoDB storage</li>
@@ -100,19 +103,17 @@ export default function App() {
               </div>
             </motion.a>
 
-            {/* Cyber Bot Hygiene */}
-            <motion.div whileHover={{scale:1.03}} className="p-5 bg-cyber-panel/60 rounded-xl border border-gray-800 card-glow">
-              <h4 className="font-semibold">Cyber Bot Hygiene (Security Advisor)</h4>
-              <p className="text-gray-300 text-sm mt-2">AI assistant for cyber hygiene, guides secure practices and performs automated checks.</p>
-              <ul className="text-gray-400 text-sm mt-2 list-disc ml-4">
-                <li>Playbooks for common misconfigurations and phishing awareness</li>
-                <li>Extensible rules for endpoint and network posture hints</li>
-              </ul>
-            </motion.div>
-
             {/* Chronic Disease Management */}
-            <motion.div whileHover={{scale:1.03}} className="p-5 bg-cyber-panel/60 rounded-xl border border-gray-800 card-glow">
-              <h4 className="font-semibold">Chronic Disease Management with AI</h4>
+            <motion.a 
+              href="https://github.com/YourGitHubUsername/Chronic-Disease-Management"
+              target="_blank" rel="noreferrer"
+              whileHover={{scale:1.03}} 
+              className="p-5 bg-cyber-panel/60 rounded-xl border border-gray-800 card-glow block"
+            >
+              <div className="flex items-center gap-2">
+                <h4 className="font-semibold">Chronic Disease Management</h4>
+                <Github className="w-4 h-4 text-cyber-neon" />
+              </div>
               <p className="text-gray-300 text-sm mt-2">Healthcare monitoring system integrating doctor–patient dashboards and AI-powered detection.</p>
               <ul className="text-gray-400 text-sm mt-2 list-disc ml-4">
                 <li>Doctor & patient dashboards for health tracking</li>
@@ -120,16 +121,24 @@ export default function App() {
                 <li>Medical store medicine data management</li>
                 <li>End-to-end system built around real-world problem statements</li>
               </ul>
-            </motion.div>
+              <div className="mt-3 flex flex-wrap gap-2 text-xs">
+                {['React','Node.js','Express','MongoDB','AI/ML','Tailwind'].map(tag=>(
+                  <span key={tag} className="px-2 py-1 rounded border border-cyber-neon/40 hover:bg-cyber-neon/10 transition">{tag}</span>
+                ))}
+              </div>
+            </motion.a>
 
             {/* Agribusiness Platform */}
             <motion.a 
-              href="https://github.com/Arya-25/Agribuziness-repo.git"
+              href="https://github.com/Arya-25/Agribuziness-repo"
               target="_blank" rel="noreferrer"
               whileHover={{scale:1.03}} 
               className="p-5 bg-cyber-panel/60 rounded-xl border border-gray-800 card-glow block"
             >
-              <h4 className="font-semibold">Agribusiness Platform</h4>
+              <div className="flex items-center gap-2">
+                <h4 className="font-semibold">Agribusiness Platform</h4>
+                <Github className="w-4 h-4 text-cyber-neon" />
+              </div>
               <p className="text-gray-300 text-sm mt-2">Full-stack platform designed for farmers, FPOs, and corporate buyers to streamline agribusiness operations.</p>
               <ul className="text-gray-400 text-sm mt-2 list-disc ml-4">
                 <li>Role-based authentication (Farmer, FPO, Corporate)</li>
@@ -143,6 +152,14 @@ export default function App() {
                 ))}
               </div>
             </motion.a>
+
+            {/* Coming Soon */}
+            <motion.div 
+              whileHover={{scale:1.03}} 
+              className="flex items-center justify-center p-5 bg-cyber-panel/30 rounded-xl border border-dashed border-gray-700 text-gray-500"
+            >
+              <span className="text-sm">🚧 New Project Coming Soon...</span>
+            </motion.div>
 
           </div>
         </section>
@@ -189,15 +206,18 @@ export default function App() {
               </ul>
             </a>
 
-            <Card>
-              <h4 className="font-semibold">Software Developer Intern — Erfinden Technologies Pvt. Ltd.</h4>
+            <a href="http://innobytes.in/" target="_blank" rel="noreferrer" className="p-5 rounded-xl border border-cyber-neon/40 bg-cyber-panel/60 card-glow">
+              <div className="flex items-center gap-2">
+                <h4 className="font-semibold">Software Developer Intern — InnoBytes (Erfinden Technologies Pvt. Ltd.)</h4>
+                <ExternalLink className="w-4 h-4 text-cyber-neon" />
+              </div>
               <p className="text-xs text-gray-400">Jun 2025 – Aug 2025 · Pune</p>
               <ul className="text-gray-300 text-sm mt-3 list-disc ml-5">
                 <li>Responsive React interfaces with HTML/CSS/JS</li>
                 <li>Database design & integration with Supabase</li>
                 <li>End-to-end Agribusiness project contribution</li>
               </ul>
-            </Card>
+            </a>
 
             <a href="https://amazuretec.com/" target="_blank" rel="noreferrer" className="p-5 rounded-xl border border-cyber-neon/40 bg-cyber-panel/60 card-glow">
               <h4 className="font-semibold">Cybersecurity Analyst Intern — Amazure Technologies Pvt. Ltd.</h4>
