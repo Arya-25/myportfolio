@@ -271,7 +271,7 @@ export default function App() {
             <Card>
               <h4 className="font-semibold text-cyber-neon">Data Loss Prevention (DLP)</h4>
               <div className="mt-3 flex flex-wrap gap-2">
-                {['Trellix — DLP Network Essentials','Trellix — DLP Endpoint Essentials','Forcepoint — Data Security Level 1']
+                {['Trellix — DLP Network Essentials','Trellix — DLP Endpoint Essentials','Forcepoint — Data Security Level 1','Fundamentals of Microsoft 365 Generative AI']
                   .map(c=>(
                     <span key={c} className="px-3 py-1 rounded-md border border-cyber-neon/40 text-gray-200 hover:bg-cyber-neon/10 transition">{c}</span>
                 ))}
@@ -280,7 +280,7 @@ export default function App() {
             <Card>
               <h4 className="font-semibold text-cyber-neon">Other Credentials</h4>
               <div className="mt-3 flex flex-wrap gap-2">
-                {['Fundamentals of Microsoft 365 Generative AI','AmbujaTech CTF — Participant']
+                {['SIH — Smart India Hackathon','VIT — Codeverse Hackathon','AmbujaTech CTF — Participant']
                   .map(c=>(
                     <span key={c} className="px-3 py-1 rounded-md border border-cyber-neon/40 text-gray-200 hover:bg-cyber-neon/10 transition">{c}</span>
                 ))}
@@ -315,7 +315,7 @@ export default function App() {
       </main>
 
       <footer className="text-center text-gray-500 py-6 text-sm">
-        © 2025 Arya Mangesh Deshpande — Built with React, Tailwind & Framer Motion.
+        © 2025 Arya Mangesh Deshpande 
       </footer>
     </div>
   )
