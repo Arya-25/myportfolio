@@ -4,7 +4,7 @@ import Navbar from './components/Navbar'
 import NameWave from './components/NameWave'
 import ThreatMap from './components/ThreatMap'
 import { motion } from 'framer-motion'
-import { Shield, Terminal, Cpu, Mail, BookOpenCheck, Trophy, Github } from 'lucide-react'
+import { Shield, Terminal, Cpu, Mail, BookOpenCheck, Trophy, Github, ExternalLink } from 'lucide-react'
 
 // ✅ Sections & Resume path
 const sections = ['home','projects','skills','experience','education','certifications','contact','threats']
@@ -80,14 +80,15 @@ export default function App() {
 
             {/* Red & Blue Team Simulation Platform */}
             <motion.a 
-              href="https://github.com/Arya-25/Red-Team-Blue-Team-.git"
+              href="https://github.com/Arya-25/Red-Team-Blue-Team-"
               target="_blank" rel="noreferrer"
               whileHover={{scale:1.03}} 
               className="p-5 bg-cyber-panel/60 rounded-xl border border-gray-800 card-glow block"
             >
-              <h4 className="font-semibold flex items-center gap-2">
-                Red & Blue Team Simulation Platform <Github className="w-4 h-4 text-cyber-neon"/>
-              </h4>
+              <div className="flex items-center gap-2">
+                <h4 className="font-semibold">Red & Blue Team Simulation Platform</h4>
+                <Github className="w-4 h-4 text-cyber-neon" />
+              </div>
               <p className="text-gray-300 text-sm mt-2">Comprehensive training platform integrating real tools and telemetry.</p>
               <ul className="text-gray-400 text-sm mt-2 list-disc ml-4">
                 <li>React.js frontend, Django REST backend, MongoDB storage</li>
@@ -95,6 +96,11 @@ export default function App() {
                 <li>Automated scenario deployment with Ansible (cut setup 30%)</li>
                 <li>Virtualized labs via Proxmox; Python scripting for automation</li>
               </ul>
+              <div className="mt-3 flex flex-wrap gap-2 text-xs">
+                {['React','Django','MongoDB','ELK','Wazuh','Proxmox'].map(tag=>(
+                  <span key={tag} className="px-2 py-1 rounded border border-cyber-neon/40 hover:bg-cyber-neon/10 transition">{tag}</span>
+                ))}
+              </div>
             </motion.a>
 
             {/* Chronic Disease Management */}
@@ -104,9 +110,10 @@ export default function App() {
               whileHover={{scale:1.03}} 
               className="p-5 bg-cyber-panel/60 rounded-xl border border-gray-800 card-glow block"
             >
-              <h4 className="font-semibold flex items-center gap-2">
-                Chronic Disease Management with AI <Github className="w-4 h-4 text-cyber-neon"/>
-              </h4>
+              <div className="flex items-center gap-2">
+                <h4 className="font-semibold">Chronic Disease Management</h4>
+                <Github className="w-4 h-4 text-cyber-neon" />
+              </div>
               <p className="text-gray-300 text-sm mt-2">Healthcare monitoring system integrating doctor–patient dashboards and AI-powered detection.</p>
               <ul className="text-gray-400 text-sm mt-2 list-disc ml-4">
                 <li>Doctor & patient dashboards for health tracking</li>
@@ -115,22 +122,48 @@ export default function App() {
                 <li>End-to-end system built around real-world problem statements</li>
               </ul>
               <div className="mt-3 flex flex-wrap gap-2 text-xs">
-                {['Python','Flask','TensorFlow','React','MongoDB','AI/ML'].map(tag=>(
+                {['React','Node.js','Express','MongoDB','AI/ML','Tailwind'].map(tag=>(
                   <span key={tag} className="px-2 py-1 rounded border border-cyber-neon/40 hover:bg-cyber-neon/10 transition">{tag}</span>
                 ))}
               </div>
             </motion.a>
 
-            {/* Agribusiness Platform */}
+            {/* AI-Powered Smart Surveillance */}
             <motion.a 
-              href="https://github.com/Arya-25/Agribuziness-repo.git"
+              href="https://github.com/Arya-25/Real-Time-Vigilance"
               target="_blank" rel="noreferrer"
               whileHover={{scale:1.03}} 
               className="p-5 bg-cyber-panel/60 rounded-xl border border-gray-800 card-glow block"
             >
-              <h4 className="font-semibold flex items-center gap-2">
-                Agribusiness Platform <Github className="w-4 h-4 text-cyber-neon"/>
-              </h4>
+              <div className="flex items-center gap-2">
+                <h4 className="font-semibold">AI-Powered Smart Surveillance (Real-Time Vigilance)</h4>
+                <Github className="w-4 h-4 text-cyber-neon" />
+              </div>
+              <p className="text-gray-300 text-sm mt-2">Real-time vigilance system for weapon & threat detection using AI-powered surveillance.</p>
+              <ul className="text-gray-400 text-sm mt-2 list-disc ml-4">
+                <li>Problem: Automating real-time weapon & anomaly detection</li>
+                <li>YOLOv8 + OpenCV for live detection & tracking</li>
+                <li>Flask/FastAPI backend for real-time inference</li>
+                <li>React dashboard with Twilio alerts</li>
+              </ul>
+              <div className="mt-3 flex flex-wrap gap-2 text-xs">
+                {['YOLOv8','OpenCV','Flask','FastAPI','React','MongoDB','Twilio'].map(tag=>(
+                  <span key={tag} className="px-2 py-1 rounded border border-cyber-neon/40 hover:bg-cyber-neon/10 transition">{tag}</span>
+                ))}
+              </div>
+            </motion.a>
+            
+            {/* Agribusiness Platform */}
+            <motion.a 
+              href="https://github.com/Arya-25/Agribuziness-repo"
+              target="_blank" rel="noreferrer"
+              whileHover={{scale:1.03}} 
+              className="p-5 bg-cyber-panel/60 rounded-xl border border-gray-800 card-glow block"
+            >
+              <div className="flex items-center gap-2">
+                <h4 className="font-semibold">Agribusiness Platform</h4>
+                <Github className="w-4 h-4 text-cyber-neon" />
+              </div>
               <p className="text-gray-300 text-sm mt-2">Full-stack platform designed for farmers, FPOs, and corporate buyers to streamline agribusiness operations.</p>
               <ul className="text-gray-400 text-sm mt-2 list-disc ml-4">
                 <li>Role-based authentication (Farmer, FPO, Corporate)</li>
@@ -145,35 +178,150 @@ export default function App() {
               </div>
             </motion.a>
 
-            {/* AI-Powered Smart Surveillance */}
-            <motion.a 
-              href="https://github.com/Arya-25/Real-Time-Vigilance"
-              target="_blank" rel="noreferrer"
+            {/* Coming Soon */}
+            <motion.div 
               whileHover={{scale:1.03}} 
-              className="p-5 bg-cyber-panel/60 rounded-xl border border-gray-800 card-glow block"
+              className="flex items-center justify-center p-5 bg-cyber-panel/30 rounded-xl border border-dashed border-gray-700 text-gray-500"
             >
-              <h4 className="font-semibold flex items-center gap-2">
-                AI-Powered Smart Surveillance (Real-Time Vigilance) <Github className="w-4 h-4 text-cyber-neon"/>
-              </h4>
-              <p className="text-gray-300 text-sm mt-2">Real-time vigilance system for weapon & threat detection using AI-powered surveillance.</p>
-              <ul className="text-gray-400 text-sm mt-2 list-disc ml-4">
-                <li>Problem Statement: Automating real-time threat detection (weapons & anomalies)</li>
-                <li>YOLOv8 + OpenCV for live detection & tracking</li>
-                <li>Backend with Flask/FastAPI for real-time inference</li>
-                <li>React dashboard & Twilio integration for instant alerts</li>
-              </ul>
-              <div className="mt-3 flex flex-wrap gap-2 text-xs">
-                {['YOLOv8','OpenCV','Flask','FastAPI','React','MongoDB','Twilio'].map(tag=>(
-                  <span key={tag} className="px-2 py-1 rounded border border-cyber-neon/40 hover:bg-cyber-neon/10 transition">{tag}</span>
-                ))}
-              </div>
-            </motion.a>
+              <span className="text-sm">🚧 New Project Coming Soon...</span>
+            </motion.div>
 
           </div>
         </section>
 
         {/* Skills */}
-        {/* ... unchanged rest of your sections ... */}
+        <section id="skills" className="reveal-hidden">
+          <SectionTitle icon={<Shield/>} text="Skills" />
+          <div className="grid md:grid-cols-3 gap-6 mt-4">
+            {[
+              {title:"Security & Platforms", skills:["Network Security","Kali Linux","NOC & SOC","Wireshark","AlienVault","Proxmox","ELK / Wazuh","DLP (Trellix, Forcepoint)"]},
+              {title:"Programming & Backend", skills:["Python","Django REST","API Testing","MongoDB","React.js","Log Analysis"]},
+              {title:"Soft Skills", skills:["Threat Analysis","Agile Collaboration","Documentation","Problem Solving"]}
+            ].map((group,idx)=>(
+              <Card key={idx}>
+                <h4 className="font-semibold text-white">{group.title}</h4>
+                <div className="mt-3 grid grid-cols-2 gap-2 text-gray-300">
+                  {group.skills.map(skill=>(
+                    <motion.span
+                      whileHover={{ scale: 1.1, color: "#00fff7", textShadow: "0px 0px 8px #00fff7" }}
+                      key={skill}
+                      className="card px-3 py-2 cursor-pointer rounded-md border border-cyber-neon/20 hover:border-cyber-neon/60 transition"
+                    >
+                      {skill}
+                    </motion.span>
+                  ))}
+                </div>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        {/* Experience & Internships */}
+        <section id="experience" className="reveal-hidden">
+          <SectionTitle icon={<Cpu/>} text="Experience & Internships" />
+          <div className="mt-6 grid md:grid-cols-2 gap-6">
+
+            <a href="https://theimperative.in/" target="_blank" rel="noreferrer" className="p-5 rounded-xl border border-cyber-neon/40 bg-cyber-panel/60 card-glow">
+              <h4 className="font-semibold">Security Analyst Intern — Imperative Business Ventures Pvt. Ltd.</h4>
+              <p className="text-xs text-gray-400">Aug 2025 – Present · Pune</p>
+              <ul className="mt-3 text-gray-300 text-sm list-disc ml-5">
+                <li>Red/Blue Team operations, SOC/NOC monitoring</li>
+                <li>Worked with ELK, Wazuh, Zabbix, AlienVault</li>
+                <li>Vulnerability scanning & penetration testing</li>
+              </ul>
+            </a>
+
+            <a href="http://innobytes.in/" target="_blank" rel="noreferrer" className="p-5 rounded-xl border border-cyber-neon/40 bg-cyber-panel/60 card-glow">
+              <div className="flex items-center gap-2">
+                <h4 className="font-semibold">Software Developer Intern — InnoBytes (Erfinden Technologies Pvt. Ltd.)</h4>
+
+              </div>
+              <p className="text-xs text-gray-400">Jun 2025 – Aug 2025 · Pune</p>
+              <ul className="text-gray-300 text-sm mt-3 list-disc ml-5">
+                <li>Responsive React interfaces with HTML/CSS/JS</li>
+                <li>Database design & integration with Supabase</li>
+                <li>End-to-end Agribusiness project contribution</li>
+              </ul>
+            </a>
+
+            <a href="https://amazuretec.com/" target="_blank" rel="noreferrer" className="p-5 rounded-xl border border-cyber-neon/40 bg-cyber-panel/60 card-glow">
+              <h4 className="font-semibold">Cybersecurity Analyst Intern — Amazure Technologies Pvt. Ltd.</h4>
+              <p className="text-xs text-gray-400">Jun 2024 – Aug 2024 · Pune</p>
+              <ul className="mt-3 text-gray-300 text-sm list-disc ml-5">
+                <li>Installed & optimized Trellix and Forcepoint DLP</li>
+                <li>Built secure backend Tenant Management System</li>
+                <li>Log monitoring with ELK Stack</li>
+              </ul>
+            </a>
+
+            <a href="https://nexgensis.com/" target="_blank" rel="noreferrer" className="p-5 rounded-xl border border-cyber-neon/40 bg-cyber-panel/60 card-glow">
+              <h4 className="font-semibold">Software Developer Intern — Nexgensis</h4>
+              <p className="text-xs text-gray-400">Jun 2023 – Aug 2023 · Pune</p>
+              <ul className="mt-3 text-gray-300 text-sm list-disc ml-5">
+                <li>Interactive dashboards with React.js for data visualization</li>
+                <li>Developed & tested secure APIs using Django & MongoDB</li>
+                <li>Collaborated in Agile sprints to meet milestones</li>
+              </ul>
+            </a>
+
+          </div>
+        </section>
+
+        {/* Education */}
+        <section id="education" className="reveal-hidden">
+          <SectionTitle icon={<BookOpenCheck/>} text="Education" />
+          <div className="grid md:grid-cols-2 gap-6 mt-4">
+            <Card>
+              <h4 className="font-semibold">B.Tech in CSIT — Cyber Security</h4>
+              <p className="text-gray-300 text-sm mt-1">Symbiosis Skills and Professional University, Pune</p>
+              <p className="text-gray-400 text-xs">Aug 2022 — Jun 2026 · CGPA: 8.3</p>
+            </Card>
+            <Card>
+              <h4 className="font-semibold">Higher Secondary (XII)</h4>
+              <p className="text-gray-300 text-sm mt-1">Prathibha Junior College, Pune</p>
+              <p className="text-gray-400 text-xs">2022 · 70%</p>
+            </Card>
+            <Card>
+              <h4 className="font-semibold">Secondary (X)</h4>
+              <p className="text-gray-300 text-sm mt-1">Vidya Niketan English Medium School, Pune</p>
+              <p className="text-gray-400 text-xs">2020 · 86%</p>
+            </Card>
+          </div>
+        </section>
+
+        {/* Certifications */}
+        <section id="certifications" className="reveal-hidden">
+          <SectionTitle icon={<Trophy/>} text="Certifications" />
+          <div className="mt-4 grid md:grid-cols-2 gap-6">
+            <Card>
+              <h4 className="font-semibold text-cyber-neon">Data Loss Prevention (DLP)</h4>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {['Trellix — DLP Network Essentials','Trellix — DLP Endpoint Essentials','Forcepoint — Data Security Level 1','Fundamentals of Microsoft 365 Generative AI']
+                  .map(c=>(
+                    <span key={c} className="px-3 py-1 rounded-md border border-cyber-neon/40 text-gray-200 hover:bg-cyber-neon/10 transition">{c}</span>
+                ))}
+              </div>
+            </Card>
+            <Card>
+              <h4 className="font-semibold text-cyber-neon">Other Credentials</h4>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {['SIH — Smart India Hackathon','VIT — Codeverse Hackathon','AmbujaTech CTF — Participant']
+                  .map(c=>(
+                    <span key={c} className="px-3 py-1 rounded-md border border-cyber-neon/40 text-gray-200 hover:bg-cyber-neon/10 transition">{c}</span>
+                ))}
+              </div>
+            </Card>
+          </div>
+        </section>
+
+        {/* Contact */}
+        <section id="contact" className="reveal-hidden">
+          <SectionTitle icon={<Mail/>} text="Contact" />
+          <div className="mt-2 text-gray-300">
+            Email: <a href="mailto:aryadeshpande2510@gmail.com" className="text-cyber-neon underline">aryadeshpande2510@gmail.com</a><br/>
+            LinkedIn: <a href="https://www.linkedin.com/in/arya-deshpande2510/" target="_blank" className="text-cyber-neon underline" rel="noreferrer">linkedin.com/in/arya-deshpande</a>
+          </div>
+        </section>
 
         {/* Threats */}
         <section id="threats" className="max-w-6xl mx-auto container-pad py-20">
