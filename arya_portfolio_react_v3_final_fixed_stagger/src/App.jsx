@@ -152,7 +152,34 @@ export default function App() {
                 ))}
               </div>
             </motion.a>
-            
+                        {/* Laptop Security Scanner */}
+            <motion.a 
+              href="https://github.com/Arya-25/Laptop-Scanner-"
+              target="_blank" rel="noreferrer"
+              whileHover={{scale:1.03}} 
+              className="p-5 bg-cyber-panel/60 rounded-xl border border-gray-800 card-glow block"
+            >
+              <div className="flex items-center gap-2">
+                <h4 className="font-semibold">Laptop Security Scanner</h4>
+                <Github className="w-4 h-4 text-cyber-neon" />
+              </div>
+              <p className="text-gray-300 text-sm mt-2">
+                SOC-focused utility that scans laptops for security posture, collects logs, and performs lightweight analysis inspired by ELK/Logstash pipelines.
+              </p>
+              <ul className="text-gray-400 text-sm mt-2 list-disc ml-4">
+                <li>Centralized log collection from system & security sources</li>
+                <li>Correlation & parsing of events similar to Logstash pipelines</li>
+                <li>Detects anomalies, failed logins, and suspicious process activity</li>
+                <li>Generates structured reports for SOC/NOC analysis</li>
+                <li>Designed for quick integration with SIEM workflows</li>
+              </ul>
+              <div className="mt-3 flex flex-wrap gap-2 text-xs">
+                {['Python','Log Analysis','ELK/Logstash','SOC','SIEM'].map(tag=>(
+                  <span key={tag} className="px-2 py-1 rounded border border-cyber-neon/40 hover:bg-cyber-neon/10 transition">{tag}</span>
+                ))}
+              </div>
+            </motion.a>
+
             {/* Agribusiness Platform */}
             <motion.a 
               href="https://github.com/Arya-25/Agribuziness-repo"
