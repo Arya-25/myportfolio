@@ -63,7 +63,7 @@ export default function App() {
             <div className="reveal-hidden">
               <NameWave name={'Arya Mangesh Deshpande'} />
               <p className="mt-4 text-gray-300">
-                Aspiring Cybersecurity Analyst — B.Tech (CSIT, Cybersecurity) with hands-on in network security, ethical hacking, VAPT, ELK/Wazuh, Proxmox, and DLP (Trellix, Forcepoint). I build Red/Blue training platforms and secure full-stack apps.
+                Aspiring Cybersecurity Analyst | B.Tech (CSIT) — SOC (Security Operations Center), NOC (Network Operations Center), Red & Blue teaming, full-stack security developer. Building robust defenses through ethical hacking, VAPT, ELK, Wazuh, Proxmox, and enterprise DLP (Trellix, Forcepoint).
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <a href={`/${RESUME}`} download className="px-4 py-2 rounded-md bg-gradient-to-r from-cyber-neon to-cyber-glow text-black font-semibold">Download Resume</a>
@@ -318,10 +318,10 @@ export default function App() {
 
         {/* Certifications */}
         <section id="certifications" className="reveal-hidden">
-          <SectionTitle icon={<Trophy/>} text="Certifications" />
+          <SectionTitle icon={<Trophy/>} text="Achievements" />
           <div className="mt-4 grid md:grid-cols-2 gap-6">
             <Card>
-              <h4 className="font-semibold text-cyber-neon">Data Loss Prevention (DLP)</h4>
+              <h4 className="font-semibold text-cyber-neon">Certifications</h4>
               <div className="mt-3 flex flex-wrap gap-2">
                 {['Trellix — DLP Network Essentials','Trellix — DLP Endpoint Essentials','Forcepoint — Data Security Level 1','Fundamentals of Microsoft 365 Generative AI']
                   .map(c=>(
@@ -330,9 +330,9 @@ export default function App() {
               </div>
             </Card>
             <Card>
-              <h4 className="font-semibold text-cyber-neon">Other Credentials</h4>
+              <h4 className="font-semibold text-cyber-neon">Hackathons and CTFs</h4>
               <div className="mt-3 flex flex-wrap gap-2">
-                {['SIH — Smart India Hackathon','VIT — Codeverse Hackathon','AmbujaTech CTF — Participant']
+                {['Grand Finalist — SIH 2025, IIT Jammu','VIT — Codeverse Hackathon','AmbujaTech CTF — Participant']
                   .map(c=>(
                     <span key={c} className="px-3 py-1 rounded-md border border-cyber-neon/40 text-gray-200 hover:bg-cyber-neon/10 transition">{c}</span>
                 ))}
