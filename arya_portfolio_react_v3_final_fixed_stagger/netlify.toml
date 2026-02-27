@@ -1,3 +1,7 @@
 [build]
-  command = "npm run build"
-  publish = "dist"
+base = "arya_portfolio_react_v3_final_fixed_stagger"
+command = "npm ci && npm run build"
+publish = "dist"
+
+[build.environment]
+NODE_VERSION = "20"
