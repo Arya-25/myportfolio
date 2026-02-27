@@ -3,6 +3,7 @@ import TerminalIntro from './components/TerminalIntro'
 import Navbar from './components/Navbar'
 import NameWave from './components/NameWave'
 import ThreatMap from './components/ThreatMap'
+import CyberRobot from './components/CyberRobot'
 import { motion } from 'framer-motion'
 import { Shield, Terminal, Cpu, Mail, BookOpenCheck, Trophy, Github, ExternalLink } from 'lucide-react'
 
@@ -45,7 +46,21 @@ export default function App() {
     const obs=new IntersectionObserver(es=>{
       es.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('reveal-visible') })
     },{threshold:.2})
-    document.querySelectorAll('.reveal-hidden').forEach(el=>obs.observe(el))
+
+    // observe all reveal-hidden elements and also make sure those already
+    // within the viewport become visible immediately (fix flicker on reload
+    // when the user refreshes while scrolled past the top).
+    document.querySelectorAll('.reveal-hidden').forEach(el=>{
+      // if the element is already intersecting based on bounding rect,
+      // mark it visible before observing. This handles the case where the
+      // IntersectionObserver callback might not fire until a scroll occurs.
+      const rect = el.getBoundingClientRect()
+      if(rect.top < window.innerHeight * 0.8) {
+        el.classList.add('reveal-visible')
+      }
+      obs.observe(el)
+    })
+
     return ()=>obs.disconnect()
   },[])
 
@@ -63,12 +78,22 @@ export default function App() {
             <div className="reveal-hidden">
               <NameWave name={'Arya Mangesh Deshpande'} />
               <p className="mt-4 text-gray-300">
-                Aspiring Cybersecurity Analyst | B.Tech (CSIT) — SOC (Security Operations Center), NOC (Network Operations Center), Red & Blue teaming, full-stack security developer. Building robust defenses through ethical hacking, VAPT, ELK, Wazuh, Proxmox, and enterprise DLP (Trellix, Forcepoint).
+                🔐 Cybersecurity Analyst | B.Tech (CSIT – Cyber Security)
+Hands-on experience in SOC Operations, SIEM & SOAR, Threat Hunting, and Risk Management across enterprise environments.
+Worked on Microsoft Sentinel (Azure), Splunk SIEM & SOAR (RSM), and Microsoft Purview (Defender Exposure Management).
+Skilled in KQL & SPL, Risk-Based Alerting (RBA), CVSS-based vulnerability analysis, and Incident Response.
+Experience in Red & Blue Teaming, VAPT, Trellix, Forcepoint, Microsoft Defender, ELK, Wazuh, and Azure Security.
+Built Proxmox-based security labs and implemented AI-driven log analytics for proactive threat detection.
+
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <a href={`/${RESUME}`} download className="px-4 py-2 rounded-md bg-gradient-to-r from-cyber-neon to-cyber-glow text-black font-semibold">Download Resume</a>
                 <a href="#projects" className="px-4 py-2 rounded-md border border-gray-700 text-gray-200">See Projects</a>
               </div>
+            </div>
+            {/* 3D Cyber Robot */}
+            <div className="hidden md:flex items-center justify-end reveal-hidden pr-8 translate-x-6">
+              <CyberRobot />
             </div>
           </div>
         </section>
