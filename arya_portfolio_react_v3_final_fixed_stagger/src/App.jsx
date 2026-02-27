@@ -273,6 +273,17 @@ Built Proxmox-based security labs and implemented AI-driven log analytics for pr
           <SectionTitle icon={<Cpu/>} text="Experience & Internships" />
           <div className="mt-6 grid md:grid-cols-2 gap-6">
 
+            <a href="https://www.techmahindra.com/" target="_blank" rel="noreferrer" className="p-5 rounded-xl border border-cyber-neon/40 bg-cyber-panel/60 card-glow">
+              <h4 className="font-semibold">Cybersecurity Intern — Tech Mahindra Pvt. Ltd.</h4>
+              <p className="text-xs text-gray-400">Feb 2026 – Present · Pune</p>
+              <ul className="mt-3 text-gray-300 text-sm list-disc ml-5">
+                <li>SIEM engineering & security monitoring for enterprise environments</li>
+                <li>Threat hunting and risk management with focus on vulnerability exposure reduction</li>
+                <li>Practical use of Microsoft Sentinel (Azure), Splunk SIEM & SOAR (RSM), and Microsoft Purview (Defender Exposure Management)</li>
+                <li>Participated in incident response and cross-team collaboration</li>
+              </ul>
+            </a>
+
             <a href="https://theimperative.in/" target="_blank" rel="noreferrer" className="p-5 rounded-xl border border-cyber-neon/40 bg-cyber-panel/60 card-glow">
               <h4 className="font-semibold">Security Analyst Intern — Imperative Business Ventures Pvt. Ltd.</h4>
               <p className="text-xs text-gray-400">Aug 2025 – Present · Pune</p>
